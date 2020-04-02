@@ -1,0 +1,9 @@
+node_modules
+
+*.err
+*.log
+*.csv
+*.xlsx
+*.xls
+*.doc
+*.docx
