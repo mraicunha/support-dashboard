@@ -10,8 +10,6 @@ html, body, #root {
   min-height: 100%;
 }
 
-
-
 body {
   background: #ffffff;
   background-size: cover;
@@ -25,7 +23,7 @@ body, input, button {
 
 .header {
   position: fixed;
-  background-color: #99b1b2;
+  background-color: #424549;
   color: #ffffff;
   height: 60px;
   width: calc(100% - 280px);
@@ -41,16 +39,17 @@ body, input, button {
   padding-left: 30px;
 }
 
-.side-bar {
+.sidebar {
+  display: block;
   float: left;
   height: 100%;
   width: 280px;
   position: fixed;
   overflow-y: auto;
-  background-color: #326365;
+  background-color: #7289da;
 }
 
-.side-bar {
+.sidebar-title {
   color: #ffffff;
   padding: 30px;
 }
@@ -62,7 +61,102 @@ body, input, button {
 .container {
   margin-left: 280px;
   padding-top: 80px;
+  padding-left: 31px;
   width: calc(100% - 280px);
   height: calc(100%);
   background-color: white;
+}
+
+.sidebar-list {
+  list-style: none;
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  grid-gap: 20px;
+}
+
+.sidebar-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.link {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar-menu li:hover {
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sidebar{
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    min-height: 100%;
+  }
+  
+  body {
+    background: #ffffff;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased !important;
+  }
+  
+  body, input, button {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }  
+  .menu-sidebar {
+    height: 5px;
+    background-color: white;
+    margin: 5px 0;
+    padding: 0 5px 0;
+    border-radius: 5px;
+  }
+  
+  .sandwich-menu {
+    width: 35px;
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 9;
+    cursor: pointer;
+  }
+  .sidebar{
+    display: none;
+  }
+  .header, .container{
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header h1{
+    padding-left: 60px;
+  }
+
 }

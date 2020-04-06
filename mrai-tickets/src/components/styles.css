@@ -1,0 +1,18 @@
+.card-simple {
+  width: 200px;
+  height: 200px;
+  border: solid 1px black;
+}
+
+@media screen and (min-width: 701px) {
+  .card-simple {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-simple {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
